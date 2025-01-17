@@ -34,9 +34,9 @@ def game_board_v2(current_game, player=0, row=0, column=0, just_display=False):
     print("   0  1  2")
     if not just_display:
         game[row][column] = player
-    for count, row in enumerate(game):
-        print(count, row)
-    
+    for count, row in enumerate(game): 
+        print(count, row) # loops through normal game to print game and then new game
+    # print(game) 
     return current_game
 
 
