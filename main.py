@@ -25,17 +25,20 @@ def game_board_v1():
     # for count, row in enumerate(game):
     #     print(count, row)
 
-def game_board_v2(player, row, column): 
-    
-    game = [[0, 0, 0],
+game = [[0, 0, 0],
         [0, 0, 0],
         [0, 0, 0]]
-    
-    game[row][column] = player 
-    print("   0  1  2") 
-    
+
+
+def game_board_v2(current_game, player=0, row=0, column=0, just_display=False):
+    print("   0  1  2")
+    if not just_display:
+        game[row][column] = player
     for count, row in enumerate(game):
         print(count, row)
+    
+    return current_game
+
 
 
     # print("   0  1  2")
