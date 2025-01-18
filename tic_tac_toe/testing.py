@@ -2,6 +2,7 @@
 
 from main import game_board_v1
 from main import game_board_v2
+from main import check_winner_of_game
 
 # initializing 
 
