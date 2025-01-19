@@ -6,12 +6,14 @@ from main import check_winner_of_game
 
 # initializing 
 
-game = [[0, 0, 0],
+game_initial = [[0, 0, 0],
         [0, 0, 0],
         [0, 0, 0]]
 
+game_test = [[0, 2, 1],
+        [0, 2, 2],
+        [1, 2, 1]]
 
-# run with game 
 
-game_board_v2(game) 
-game_board_v2(game, player=2, row=0, column=0)
+game_board_v1()
+game_board_v2(game_test)

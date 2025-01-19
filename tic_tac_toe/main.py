@@ -1,4 +1,8 @@
-# functions
+# function
+
+game = [[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]]
 
 def addition(x,y): 
     return x+y 
@@ -9,13 +13,10 @@ def game_board_v1():
     game = [[0, 0, 0],
         [0, 0, 0],
         [0, 0, 0]]
+    
     print("   0  1  2")
     for count, row in enumerate(game):
         print(count, row)
-
-game = [[0, 0, 0],
-        [0, 0, 0],
-        [0, 0, 0]]
 
 
 def game_board_v2(current_game, player=0, row=0, column=0, just_display=False):
@@ -25,7 +26,6 @@ def game_board_v2(current_game, player=0, row=0, column=0, just_display=False):
     for count, row in enumerate(game): 
         print(count, row) 
     return current_game
-
 
 
 def check_winner_of_game(current_game_board): 
