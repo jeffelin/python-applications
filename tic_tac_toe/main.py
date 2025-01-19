@@ -47,6 +47,13 @@ def check_winner_of_game(current_game_board):
         print(row)# checker
         if row.count(row[0]) == len(row) and row[0] != 0: 
             print(f"Player {row[0]} is the Winner")
+    
+    for column in range(len(game[0])):
+        checker = [] 
+        for row in game: # game will be initialized 
+            checker.append(row[column])
+            if checker.count(row[0]) == len(row) and row[0] != 0: 
+                print(f"Player {row[0]} is the Winner")
 
     # print("   0  1  2")
     # if not just_display:
