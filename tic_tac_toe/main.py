@@ -75,7 +75,19 @@ def final_game_board(game_map, player=0, row=0, column=0, just_display=False):
         print(str(e))
         return False
 
-# ----------------------------------------------------------------------
+def new_size(game_size): 
+    game_size = 5
+
+    game = []
+    for i in range(game_size):
+        row = []
+        for i in range(game_size):
+            row.append(0)
+        game.append(row)
+
+    print(game)
+
+# ---------------------------------------------------
 
 
 # # dump:
