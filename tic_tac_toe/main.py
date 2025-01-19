@@ -29,19 +29,35 @@ def game_board_v2(current_game, player=0, row=0, column=0, just_display=False):
 
 
 def check_winner_of_game(current_game_board): 
-   
+    # horizontal rows 
     for row in game:
         print(row)
         if row.count(row[0]) == len(row) and row[0] != 0: 
-            print(f"Player {row[0]} is the Winner")
+            print(f"Player {row[0]} is the Winner by Horizontal Destruction!")
     
+    # vertical columns 
     for column in range(len(game[0])):
         vertical_column = [] 
         for row in game:
             vertical_column.append(row[column])
             if vertical_column.count(row[0]) == len(row) and row[0] != 0: 
-                print(f"Player {row[0]} is the Winner")
+                print(f"Player {row[0]} is the Winner by Vertical Destruction!")
 
+    # / diagonal
+    right_diagonals = []
+    for idx, reverse_idx in enumerate(reversed(range(len(game)))):
+        right_diagonals.append(game[idx][reverse_idx])
+
+    if right_diagonals.count(right_diagonals[0]) == len(right_diagonals) and right_diagonals[0] != 0:
+        print(f"Player {right_diagonals[0]} has won Diagonally to the RIGHT!")
+
+    # \ diagonal
+    left_diagonals = []
+    for ix in range(len(game)):
+        left_diagonals.append(game[ix][ix])
+
+    if left_diagonals.count(left_diagonals[0]) == len(left_diagonals) and left_diagonals[0] != 0:
+        print(f"Player {left_diagonals[0]} has won Diagonally to the LEFT!")
 
 
 
