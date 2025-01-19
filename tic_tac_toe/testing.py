@@ -1,7 +1,8 @@
 # testing cases 
-
-from main import game_board_v1
-from main import game_board_v2
+import secrets 
+# from main import game_board_v1
+# from main import game_board_v2
+from main import final_game_board
 from main import check_winner_of_game
 
 # initializing 
@@ -15,5 +16,13 @@ game_test = [[0, 2, 1],
         [1, 2, 1]]
 
 
-game_board_v1()
-game_board_v2(game_test)
+play = True 
+players = [1,2]
+while play: 
+    game_initial 
+
+
+game_won = False 
+current_player = secrets.choice(players)
+
+game = final_game_board(game_initial, player =1, row =3, column =1)
