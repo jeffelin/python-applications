@@ -24,3 +24,8 @@ def pandas_dataframes():
     df_NEW_INDEX = df.set_index('NEW_INDEX')
     df.cov().head()
     df.corr().head()
+
+def missing_column(column):
+    for problem in df[column].unique():
+        if problem in df.columns:
+            print("Missing something here....")
