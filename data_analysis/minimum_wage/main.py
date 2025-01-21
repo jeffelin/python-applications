@@ -10,6 +10,14 @@ dfs = pd.read_html(web.text)
 
 dfs = pd.read_html("https://www.infoplease.com/state-abbreviations-and-state-postal-codes")
 
+# uploading data sets and from url 
+
+def url_datasets_to_csv(directory):
+
+    for df in dfs:
+        print(df.head())
+    state_abbv = dfs[0]
+    state_abbv.to_csv(r'directory')
 
 # functions
 
