@@ -21,9 +21,14 @@ def pandas_dataframes():
     df.head(n) 
     df.tail(n) 
     df_COLUMN = df[df['COLUMN'] == 'ROW_VALUES']
+    # averages example 
+    oklahoma_df = df[df['State'] == 'Oklahoma']
+    oklahoma_min_2020 = oklahoma_df['State.Minimum.Wage.2020.Dollars']
+    oklahoma_min_2020.mean()
     df_NEW_INDEX = df.set_index('NEW_INDEX')
     df.cov().head()
     df.corr().head()
+
 
 def missing_column(column):
     for problem in df[column].unique():
@@ -43,3 +48,4 @@ def plotting_mastermind(df):
 
     plt.matshow(df)
     plt.show()
+
