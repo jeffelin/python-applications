@@ -29,3 +29,17 @@ def missing_column(column):
     for problem in df[column].unique():
         if problem in df.columns:
             print("Missing something here....")
+
+def plotting_mastermind(df): 
+    
+    labels = [c[:2] for c in df.columns]  # get abbv state names.
+    fig = plt.figure(figsize=(12,12))  # figure so we can add axis
+    ax = fig.add_subplot(111)  # define axis, so we can modify
+    ax.matshow(df, cmap=plt.cm.RdYlGn)  # display the matrix
+    ax.set_xticks(np.arange(len(labels)))  # show them all!
+    ax.set_yticks(np.arange(len(labels)))  # show them all!
+    ax.set_xticklabels(labels)  # set to be the abbv (vs useless #)
+    ax.set_yticklabels(labels)  # set to be the abbv (vs useless #)
+
+    plt.matshow(df)
+    plt.show()
