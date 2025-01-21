@@ -1,6 +1,15 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import requests 
+
+# url 
+
+web = requests.get("https://www.infoplease.com/state-abbreviations-and-state-postal-codes")
+dfs = pd.read_html(web.text)
+
+dfs = pd.read_html("https://www.infoplease.com/state-abbreviations-and-state-postal-codes")
+
 
 # functions
 
