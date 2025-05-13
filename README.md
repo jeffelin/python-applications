@@ -1,5 +1,5 @@
 
-# Python Applications 
+# Python Applications (archived)
 
 This repo is a tutorial for Python of my own self studying. Learning is runthrough notebook. Main is main code. Testing is code deployment. 
 
